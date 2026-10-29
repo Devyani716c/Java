@@ -1,0 +1,30 @@
+class Add {
+    static int count = 0;
+
+    int sum(int a, int b) {
+        count++;
+        return a + b;
+    }
+
+    int sum(int a, int b, int c) {
+        count++;
+        return a + b + c;
+    }
+
+    int total(int... n) {
+        int s = 0;
+        for (int x : n)
+            s += x;
+        return s;
+    }
+}
+
+public class Exp5 {
+    public static void main(String[] args) {
+        Add a = new Add();
+        System.out.println(a.sum(2, 3));
+        System.out.println(a.sum(2, 3, 4));
+        System.out.println(a.total(1, 2, 3));
+        System.out.println(Add.count);
+    }
+}
