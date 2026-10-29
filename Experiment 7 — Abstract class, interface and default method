@@ -1,0 +1,23 @@
+abstract class Shape {
+    abstract void draw();
+}
+
+interface A {
+    default void show() {
+        System.out.println("Default method");
+    }
+}
+
+class Circle extends Shape implements A {
+    void draw() {
+        System.out.println("Circle");
+    }
+}
+
+public class Exp7 {
+    public static void main(String[] args) {
+        Circle c = new Circle();
+        c.draw();
+        c.show();
+    }
+}
