@@ -1,0 +1,24 @@
+class Student {
+    int roll;
+
+    Student() {
+        this(0);
+    }
+
+    Student(int roll) {
+        this.roll = roll;
+    }
+
+    void show() {
+        System.out.println(roll);
+    }
+}
+
+public class Exp4 {
+    public static void main(String[] args) {
+        Student a = new Student();
+        Student b = new Student(9);
+        a.show();
+        b.show();
+    }
+}
