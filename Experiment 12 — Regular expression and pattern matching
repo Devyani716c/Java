@@ -1,0 +1,12 @@
+import java.util.regex.*;
+
+public class Exp12 {
+    public static void main(String[] args) {
+        String s = "abc123";
+
+        if (Pattern.matches("[a-z]+[0-9]+", s))
+            System.out.println("Matched");
+        else
+            System.out.println("Not Matched");
+    }
+}
