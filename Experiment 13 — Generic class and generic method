@@ -1,0 +1,23 @@
+class Box<T> {
+    T value;
+
+    Box(T value) {
+        this.value = value;
+    }
+
+    void show() {
+        System.out.println(value);
+    }
+}
+
+public class Exp13 {
+    static <T> void display(T x) {
+        System.out.println(x);
+    }
+
+    public static void main(String[] args) {
+        Box<Integer> b = new Box<>(10);
+        b.show();
+        display("Java");
+    }
+}
