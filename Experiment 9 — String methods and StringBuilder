@@ -1,0 +1,13 @@
+public class Exp9 {
+    public static void main(String[] args) {
+        String s = "Java";
+
+        System.out.println(s.length());
+        System.out.println(s.toUpperCase());
+        System.out.println(s.charAt(0));
+
+        StringBuilder b = new StringBuilder("Hello");
+        b.append(" Java");
+        System.out.println(b);
+    }
+}
