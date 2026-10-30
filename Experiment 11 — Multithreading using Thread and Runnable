@@ -1,0 +1,21 @@
+class A extends Thread {
+    public void run() {
+        System.out.println("Thread running");
+    }
+}
+
+class B implements Runnable {
+    public void run() {
+        System.out.println("Runnable running");
+    }
+}
+
+public class Exp11 {
+    public static void main(String[] args) {
+        A a = new A();
+        Thread b = new Thread(new B());
+
+        a.start();
+        b.start();
+    }
+}
