@@ -1,0 +1,17 @@
+USE companydb;
+
+CREATE TABLE IF NOT EXISTS account (
+    id INT PRIMARY KEY,
+    balance INT
+);
+
+INSERT IGNORE INTO account VALUES (1, 1000), (2, 500);
+
+DROP PROCEDURE IF EXISTS GetBalance;
+
+DELIMITER //
+CREATE PROCEDURE GetBalance(IN aid INT)
+BEGIN
+    SELECT balance FROM account WHERE id = aid;
+END //
+DELIMITER ;
